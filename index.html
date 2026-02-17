@@ -8,21 +8,25 @@
     <title>Neuro Dynamics Method | 竹内康弘</title>
     <meta name="description" content="日本初、機能神経学×ディファレンシャルラーニング×アフォーダンスを融合させたトレーニングメソッド。脳から限界を超える。アスリートのパフォーマンス向上、イップス改善、組織の能力開発に。">
     <link rel="canonical" href="https://neuro-dynamics.jp/" />
+
+    <!-- サイトアイコン設定 (今回アップロードする icon.png を指定) -->
+    <link rel="icon" href="https://neuro-dynamics.jp/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://neuro-dynamics.jp/icon.png">
     
-    <!-- OGP設定 (SNSシェア時の表示設定) -->
+    <!-- OGP設定 (SNSやGoogle Keepなどで表示される画像) -->
     <meta property="og:title" content="Neuro Dynamics Method | 竹内康弘" />
     <meta property="og:description" content="日本初、機能神経学×ディファレンシャルラーニング×アフォーダンスを融合させたトレーニングメソッド。脳から限界を超える。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://neuro-dynamics.jp/" />
-    <!-- 変更点：SNS表示画像を magazine.jpg (雑誌表紙) に変更しました -->
-    <meta property="og:image" content="https://neuro-dynamics.jp/magazine.jpg" />
+    <!-- SNS表示画像もロゴに変更 -->
+    <meta property="og:image" content="https://neuro-dynamics.jp/icon.png" />
     <meta property="og:site_name" content="Neuro Dynamics Method" />
 
     <!-- X (旧Twitter) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Neuro Dynamics Method | 竹内康弘" />
     <meta name="twitter:description" content="日本初、機能神経学×ディファレンシャルラーニング×アフォーダンスを融合させたトレーニングメソッド。" />
-    <meta name="twitter:image" content="https://neuro-dynamics.jp/magazine.jpg" />
+    <meta name="twitter:image" content="https://neuro-dynamics.jp/icon.png" />
 
     <!-- 構造化データ (JSON-LD) -->
     <script type="application/ld+json">
@@ -30,7 +34,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Neuro Dynamics Method",
-      "image": "https://neuro-dynamics.jp/logo.jpg",
+      "image": "https://neuro-dynamics.jp/icon.png",
       "url": "https://neuro-dynamics.jp/",
       "telephone": "",
       "address": {
@@ -45,6 +49,7 @@
         "alumniOf": "大学院（人間科学専攻）",
         "sameAs": [
           "https://www.instagram.com/y.take.jw",
+          "https://x.com/taketakeyasuyas",
           "https://note.com/inbambs"
         ]
       },
@@ -95,6 +100,7 @@
         const CheckCircle2 = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>;
         const QuoteIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" /></svg>;
         const Instagram = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>;
+        const SocialX = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>;
 
         const { useState, useEffect } = React;
 
@@ -265,6 +271,17 @@ ${formData.message}
                       </button>
                     ))}
                     
+                    {/* PC用 X (Twitter) リンク */}
+                    <a 
+                      href="https://x.com/taketakeyasuyas" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`text-sm font-medium p-2 rounded-full transition-all flex items-center gap-2 ${isScrolled ? 'text-slate-600 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}
+                      aria-label="X (Twitter)"
+                    >
+                      <SocialX className="w-5 h-5" />
+                    </a>
+
                     {/* PC用 Instagramリンク */}
                     <a 
                       href="https://www.instagram.com/y.take.jw?utm_source=qr&igsh=MXdqYmJ4NHptNXZtcQ==" 
@@ -311,6 +328,9 @@ ${formData.message}
                     ))}
                     <a href="https://note.com/inbambs" target="_blank" rel="noopener noreferrer" className="text-left text-lg font-medium text-slate-700 py-2">
                       Official Blog (Note)
+                    </a>
+                    <a href="https://x.com/taketakeyasuyas" target="_blank" rel="noopener noreferrer" className="text-left text-lg font-medium text-slate-800 py-2 flex items-center gap-2">
+                      <SocialX className="w-5 h-5" /> Official X
                     </a>
                     <a href="https://www.instagram.com/y.take.jw?utm_source=qr&igsh=MXdqYmJ4NHptNXZtcQ==" target="_blank" rel="noopener noreferrer" className="text-left text-lg font-medium text-pink-600 py-2 flex items-center gap-2">
                       <Instagram className="w-5 h-5" /> Official Instagram
@@ -785,9 +805,14 @@ ${formData.message}
                        <a href="#profile" className="hover:text-white transition-colors">Profile</a>
                        <a href="https://note.com/inbambs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Blog</a>
                      </div>
-                     <a href="https://www.instagram.com/y.take.jw?utm_source=qr&igsh=MXdqYmJ4NHptNXZtcQ==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-pink-500">
-                       <Instagram className="w-5 h-5" /> Instagram
-                     </a>
+                     <div className="flex gap-4">
+                       <a href="https://x.com/taketakeyasuyas" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-slate-400">
+                         <SocialX className="w-5 h-5" /> X (Twitter)
+                       </a>
+                       <a href="https://www.instagram.com/y.take.jw?utm_source=qr&igsh=MXdqYmJ4NHptNXZtcQ==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-pink-500">
+                         <Instagram className="w-5 h-5" /> Instagram
+                       </a>
+                     </div>
                   </div>
                   <div className="text-xs">
                     &copy; {new Date().getFullYear()} Yasuhiro Takeuchi / Neuro Dynamics Method. All rights reserved.
